@@ -1,98 +1,120 @@
-# QuizMaster — OASIS INFOBYTE Android App Development (Task 4)
+# Task 4 — Android Quiz Application
 
-A native Android multiple-choice quiz application built with **Java and XML**. It presents one question at a time, gives instant answer feedback, tracks the score, and displays a results summary.
+## OASIS INFOBYTE OCTOBER P1 INTERNSHIP 2026
 
-> Internship task brief: Task 4 — Quiz Application. This repository is a starter implementation intended to be opened, tested, personalised, and submitted by the intern.
+---
 
-## Features
+## 1. Project Title
+**QuizMaster — Android Multiple-Choice Quiz Application**
 
-- Welcome screen with a clear Start Quiz action.
-- 15 locally stored General Knowledge questions (requirement: at least 10).
-- One question displayed at a time with a question counter and progress bar.
-- Four answer choices using `RadioButton` controls inside a `RadioGroup`.
-- Immediate feedback: correct option is highlighted green; a selected wrong option is highlighted red and the correct option green.
-- Explanation displayed after every answer.
-- Prevents changing an answer after feedback is shown.
-- Next Question / See Results navigation.
-- Final score, correct count, incorrect count, percentage, and performance message.
-- Restart Quiz and Back to Home actions.
-- Question order shuffled at the start of every attempt.
-- Offline operation; no API key, internet permission, or backend required.
+## 2. Oasis Infobyte Internship Details
+- **Program:** Oasis Infobyte Android App Development Internship
+- **Batch / Period:** October P1 2026
+- **Task Number:** Task 4
 
-## Technology
+## 3. Task Number
+- **Task 4:** Quiz Application (Java / XML)
 
-- Android Studio
-- Java 17
-- XML layouts and Android framework widgets
-- Minimum Android version: API 23 (Android 6.0)
-- Compile / target SDK: 35
+## 4. Project Overview
+QuizMaster is a robust, lightweight, and fully offline native Android quiz application developed using Java and XML. It presents general knowledge questions one at a time, tracks user answers instantly with color-coded feedback, calculates scores dynamically, and provides a comprehensive results summary with personal best high score persistence.
 
-## Project structure
+## 5. Objectives
+- Design and implement a clean, modern user interface following Material Design guidelines.
+- Present multiple-choice quiz questions with dynamic question navigation and progress tracking.
+- Provide instant visual and textual feedback on correct/incorrect answers.
+- Persist personal best high scores using `SharedPreferences`.
+- Implement robust local data storage (`QuizRepository`) and unit testing.
 
+## 6. Features
+- **Welcome Screen:** Features branding, personal best score tracking (`SharedPreferences`), and a Start Quiz button.
+- **Dynamic Question Bank:** Contains 15 General Knowledge questions (shuffled on every attempt).
+- **Interactive Quiz Flow:** One question at a time with a live question counter and progress bar.
+- **Radio Button Options:** Four options per question using custom states.
+- **Immediate Feedback:** Correct answers highlight green; selected wrong answers highlight red while the correct answer highlights green. Explanation text is displayed instantly.
+- **Answer Lock:** Prevents modifying answers after selection.
+- **Results Summary:** Displays final score, percentage, correct/incorrect count, performance feedback message, and option to restart or return home.
+- **Offline Operation:** Fully self-contained with no network permissions or backend required.
+
+## 7. Technologies Used
+- **Language:** Java 17
+- **UI Toolkit:** Android Views, XML Layouts, Material Components (`AppCompatActivity`)
+- **Architecture:** MVVM Architecture (`ViewModel`, `ViewModelProvider`, `QuizRepository`)
+- **Storage:** `SharedPreferences` (High score persistence)
+- **Build System:** Gradle 9.x / Android Gradle Plugin 9.4.1
+- **Testing:** JUnit 4 unit tests for ViewModel and Repository logic
+- **Minimum SDK:** API 23 (Android 6.0)
+- **Target / Compile SDK:** API 35 (Android 15)
+
+## 8. Application Screenshots
+*Screenshots of the Welcome, Quiz, and Result screens are stored in the [`screenshots/`](screenshots/) directory.*
+
+## 9. Project Structure
 ```text
-QuizMaster/
+AndroidAppDev-Task4-QuizApplication/
 ├── app/
 │   ├── build.gradle
-│   └── src/main/
-│       ├── AndroidManifest.xml
-│       ├── java/com/oasisinfobyte/quizmaster/
-│       │   ├── MainActivity.java
-│       │   ├── QuizActivity.java
-│       │   ├── ResultActivity.java
-│       │   ├── QuizQuestion.java
-│       │   └── QuizRepository.java
-│       └── res/
-│           ├── drawable/       # Rounded cards, buttons, answer states
-│           ├── layout/         # Welcome, quiz, and result screens
-│           └── values/         # Colours and styles
+│   └── src/
+│       ├── main/
+│       │   ├── AndroidManifest.xml
+│       │   ├── java/com/oasisinfobyte/quizmaster/
+│       │   │   ├── MainActivity.java
+│       │   │   ├── QuizActivity.java
+│       │   │   ├── ResultActivity.java
+│       │   │   ├── QuizQuestion.java
+│       │   │   ├── QuizRepository.java
+│       │   │   └── QuizViewModel.java
+│       │   └── res/
+│       │       ├── drawable/       # Rounded cards, button & option state drawables
+│       │       ├── layout/         # activity_main.xml, activity_quiz.xml, activity_result.xml
+│       │       └── values/         # colors.xml, styles.xml
+│       └── test/
+│           └── java/com/oasisinfobyte/quizmaster/
+│               ├── QuizRepositoryTest.java
+│               └── QuizViewModelTest.java
 ├── docs/
+│   ├── DEMO_SCRIPT.md
 │   ├── PROJECT_DETAILS.md
-│   ├── TEST_CASES.md
-│   └── DEMO_SCRIPT.md
+│   └── TEST_CASES.md
+├── screenshots/
 ├── build.gradle
-├── gradle.properties
-└── settings.gradle
+│   ├── gradle.properties
+│   ├── settings.gradle
+│   ├── gradlew
+│   └── gradlew.bat
 ```
 
-## Open and run in Android Studio
+## 10. Prerequisites
+- **Android Studio:** Ladybug / Iguana or newer (supporting Gradle 9.x and JDK 17)
+- **Java Development Kit (JDK):** Version 17
+- **Android SDK:** Platform 35 and Build Tools 35
 
-1. Extract the ZIP file.
-2. Open Android Studio → **Open** → select the `QuizMaster` folder (the folder containing `settings.gradle`).
-3. Allow Gradle sync to finish. Use JDK 17.
-4. If Android Studio asks to install Android SDK Platform 35, install it using SDK Manager.
-5. Create an emulator (API 23 or later) or connect an Android phone with USB debugging enabled.
-6. Select the `app` run configuration and click **Run**.
+## 11. Android Studio Setup
+1. Launch Android Studio.
+2. Select **Open** and choose the `AndroidAppDev-Task4-QuizApplication` folder (the directory containing `settings.gradle`).
+3. Ensure JDK 17 is selected in Project Structure settings.
+4. Allow Gradle sync to complete.
 
-The first Gradle sync requires an internet connection to download the Android Gradle Plugin and SDK components. The application itself runs offline.
+## 12. Build and Run Instructions
+- **Via Android Studio:**
+  1. Select the `app` run configuration.
+  2. Choose an emulator (API 23+) or connected Android device.
+  3. Click the **Run** (Play) button.
+- **Via Command Line (Gradle Wrapper):**
+  ```bash
+  cd AndroidAppDev-Task4-QuizApplication
+  ./gradlew clean assembleDebug
+  ```
 
-## Customise questions
+## 13. Testing Details
+The project includes automated unit tests verifying repository data loading and ViewModel state management.
+- **Run Unit Tests via Gradle:**
+  ```bash
+  cd AndroidAppDev-Task4-QuizApplication
+  ./gradlew testDebugUnitTest
+  ```
+- **Test Summary:** 4 passed, 0 failed.
 
-Edit `QuizRepository.java`. Each question contains:
-- Question text
-- Four answer strings
-- Correct answer index (`0` = first option, `1` = second, etc.)
-- Explanation shown after the answer
-
-Keep exactly four options per question and ensure the correct index is between 0 and 3.
-
-## Important implementation notes
-
-- `QuizRepository.getQuestions()` creates a fresh list and shuffles it for each attempt.
-- `QuizActivity` owns the quiz state and score calculation.
-- `ResultActivity` receives score and total question count using Intent extras.
-- All question content is bundled locally, so no network permission is required.
-
-## Before internship submission
-
-- Replace the placeholder project identity in screenshots/video with your own name where required.
-- Build and run on an emulator or physical Android phone.
-- Test every feature and fix any device-specific issues.
-- Capture genuine screenshots and a screen-recorded demo.
-- Add your own name, internship track, and task title to the first 2 seconds of the demo video.
-- Push the project to the required GitHub repository named exactly `OBISIP` (per the supplied internship instructions). Keep this project in its own task folder, following the folder naming format specified by your internship.
-- Submit through the official form only. Include the GitHub repository link and live demo if applicable.
-- Do not claim evaluation, certification, or completion until the organisation confirms it.
-
-## Author
-
-Add your name, college, and internship details here before publishing.
+## 14. Author Information
+- **Intern:** vicky21-hub
+- **GitHub Repository:** [vicky21-hub/OIBSIP](https://github.com/vicky21-hub/OIBSIP)
+- **Program:** Oasis Infobyte Android App Development Internship (October 2026)

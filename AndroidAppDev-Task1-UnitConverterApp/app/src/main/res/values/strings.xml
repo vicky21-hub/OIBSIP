@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Unit Converter</string>
+    <string name="title_category">Select Category</string>
+    <string name="title_source_unit">From Unit</string>
+    <string name="title_target_unit">To Unit</string>
+    <string name="hint_enter_value">Enter numeric value</string>
+    <string name="btn_convert">Convert</string>
+    <string name="result_placeholder">Converted result will appear here</string>
+    <string name="toast_empty_input">Please enter a value to convert</string>
+    <string name="toast_invalid_number">Please enter a valid numeric value</string>
+
+    <string-array name="categories">
+        <item>Length</item>
+        <item>Weight</item>
+        <item>Temperature</item>
+        <item>Volume</item>
+    </string-array>
+
+    <string-array name="length_units">
+        <item>Meter (m)</item>
+        <item>Kilometer (km)</item>
+        <item>Centimeter (cm)</item>
+        <item>Millimeter (mm)</item>
+        <item>Mile (mi)</item>
+        <item>Yard (yd)</item>
+        <item>Foot (ft)</item>
+        <item>Inch (in)</item>
+    </string-array>
+
+    <string-array name="weight_units">
+        <item>Kilogram (kg)</item>
+        <item>Gram (g)</item>
+        <item>Milligram (mg)</item>
+        <item>Pound (lb)</item>
+        <item>Ounce (oz)</item>
+    </string-array>
+
+    <string-array name="temperature_units">
+        <item>Celsius (°C)</item>
+        <item>Fahrenheit (°F)</item>
+        <item>Kelvin (K)</item>
+    </string-array>
+
+    <string-array name="volume_units">
+        <item>Liter (L)</item>
+        <item>Milliliter (mL)</item>
+        <item>Gallon (US gal)</item>
+        <item>Cup (US cup)</item>
+    </string-array>
+</resources>
