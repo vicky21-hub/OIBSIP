@@ -1,0 +1,12 @@
+<resources>
+    <color name="primary">#3157D5</color>
+    <color name="primary_dark">#2442A8</color>
+    <color name="page_bg">#F4F6FB</color>
+    <color name="card_bg">#FFFFFF</color>
+    <color name="text_primary">#172033</color>
+    <color name="text_secondary">#697386</color>
+    <color name="success">#168252</color>
+    <color name="error">#BE3737</color>
+    <color name="divider">#E7EAF1</color>
+    <color name="progress_bg">#DDE3F0</color>
+</resources>

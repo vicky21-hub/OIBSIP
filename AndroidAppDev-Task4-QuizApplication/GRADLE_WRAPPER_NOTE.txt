@@ -1,0 +1,1 @@
+This project does not bundle Gradle wrapper binaries. Open the project in Android Studio; Android Studio can sync it using its configured Gradle installation. If you want a wrapper, run `gradle wrapper` from the project root using a local Gradle installation.
