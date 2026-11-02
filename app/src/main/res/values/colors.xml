@@ -1,0 +1,14 @@
+<resources>
+    <item name="purple_200" type="color">#FFBB86FC</item>
+    <item name="purple_500" type="color">#FF6200EE</item>
+    <item name="purple_700" type="color">#FF3700B3</item>
+    <item name="teal_200" type="color">#FF03DAC5</item>
+    <item name="teal_700" type="color">#FF018786</item>
+    <item name="black" type="color">#FF000000</item>
+    <item name="white" type="color">#FFFFFFFF</item>
+    <item name="gray_disabled" type="color">#B0B0B0</item>
+    <item name="green_start" type="color">#FF4CAF50</item>
+    <item name="orange_pause" type="color">#FFFF9800</item>
+    <item name="red_reset" type="color">#FFF44336</item>
+    <item name="blue_lap" type="color">#FF2196F3</item>
+</resources>
